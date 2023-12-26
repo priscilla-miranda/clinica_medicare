@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+     <title>Medical center</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+
+<style>
+     table {
+          width: 50%;
+          margin-left: 40px;
+          margin-right: 40px;
+
+     }
+
+     table th {
+          border-collapse: collapse;
+          border: 1px solid black
+     }
+
+     tbody tr td {
+          border: 1px solid black;
+     }
+
+     h2 {
+          text-align: center;
+     }
+
+     .img-responsive {
+          margin-top: 80px;
+          height: 500px;
+          border: 10px;
+          border-color: white;
+     }
+
+     #form {
+          margin-top: 15px;
+
+     }
+
+     div h2 {
+          margin-top: 80px;
+          margin-left: 15px;
+     }
+</style>
+
+<body>
+
+     <!-- MENU -->
+     <section class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+               <!-- lOGO TEXT HERE -->
+               <a href="index.html" class="navbar-brand"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                         fill="#a5c422" class="bi bi-heart-pulse-fill" viewBox="0 0 16 16">
+                         <path
+                              d="M1.475 9C2.702 10.84 4.779 12.871 8 15c3.221-2.129 5.298-4.16 6.525-6H12a.5.5 0 0 1-.464-.314l-1.457-3.642-1.598 5.593a.5.5 0 0 1-.945.049L5.889 6.568l-1.473 2.21A.5.5 0 0 1 4 9H1.475Z" />
+                         <path
+                              d="M.88 8C-2.427 1.68 4.41-2 7.823 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C11.59-2 18.426 1.68 15.12 8h-2.783l-1.874-4.686a.5.5 0 0 0-.945.049L7.921 8.956 6.464 5.314a.5.5 0 0 0-.88-.091L3.732 8H.88Z" />
+                    </svg> Medical center </a>
+          </div>
+     </section>
+
+     <section id="appointment">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-6 col-sm-6">
+                         <img src="./images/news-image.jpg" class="img-responsive" alt="">
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+
+                         <form id="appointment-form" role="form" method="post" action="#">
+
+
+                              <div class="section-title">
+                                   <h2>Marque seu exame</h2>
+                              </div>
+
+                              <div class="wow fadeInUp">
+                                   <div class="col-md-12 col-sm-12" id="form">
+                                        <label for="name">Nome Completo:</label>
+                                        <input type="text" class="form-control" id="name" name="name"
+                                             placeholder="Digite seu nome">
+                                   </div>
+
+
+                                   <div class="col-md-6 col-sm-6" id="form">
+                                        <label for="select">Tipo de exame:</label>
+                                        <select class="form-control" id="selectExame">
+                                             <option disabled selected>Selecione o exame</option>
+                                             <option>Hemograma</option>
+                                             <option>TSH e T4 livre</option>
+                                             <option>Glicemia</option>
+                                             <option>Ureia e Creatinina</option>
+                                             <option>Radiografia</option>
+                                             <option>Ultrassonografia</option>
+                                             <option>Tomografia</option>
+                                        </select>
+                                   </div>
+
+                                   <div class="col-md-6 col-sm-6" id="form">
+                                        <label for="select">Médico solicitante:</label>
+                                        <select class="form-control" id="selectMedico">
+                                             <option disabled selected>Selecione o médico</option>
+                                             <option>Médico 1</option>
+                                             <option>Médico 2</option>
+                                             <option>Médico 3</option>
+                                             <option>Médico 4</option>
+                                        </select>
+                                   </div>
+
+                                   <div class="col-md-6 col-sm-6" id="form">
+                                        <label for="date">Data do exame:</label>
+                                        <input type="date" name="date" class="form-control" id="inputDate">
+                                   </div>
+
+                                   <div class="col-md-6 col-sm-6" id="form">
+                                        <label for="time">Escolha o horario:</label>
+                                        <input type="time" name="time" id="inputTime" class="form-control" min="09:00"
+                                             max="18:00" required>
+                                   </div>
+
+
+                                   <div class="col-md-6 col-sm-6" id="form">
+                                        <label for="telephone">Telefone</label>
+                                        <input type="tel" class="form-control" id="phone" name="phone"
+                                             placeholder="(00)00000-0000">
+                                   </div>
+
+                                   <div class="col-md-12 col-sm-12" id="form">
+                                        <button type="button" class="btn btn-primary btn-lg"
+                                             id="btnCadastro">Enviar</button>
+                                        <button type="button" class="btn btn-primary btn-lg"
+                                             onclick="exibirExames()">Agendamentos do mês</button>
+                                   </div>
+
+                              </div>
+
+                         </form>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+
+
+     <!-- FOOTER -->
+     <footer data-stellar-background-ratio="8">
+
+          <div class="col-md-12 col-sm-12 border-top">
+
+               <div class="copyright-text">
+                    <br><br>
+                    <p style="text-align: center;">Copyright &copy; 2018 Your Company</p>
+
+               </div>
+          </div>
+
+          </div>
+
+
+     </footer>
+
+     <!-- SCRIPTS -->
+
+     <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+          integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+     <script src="./js/_cadastro_exame.js"></script>
+</body>
+
+</html>
