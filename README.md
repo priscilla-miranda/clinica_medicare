@@ -10,7 +10,7 @@ Desenvolvi um formulário robusto para a marcação de consultas médicas, visan
 
 Prevenção de Repetição de Horários: Impede a repetição de horários para o mesmo médico, assegurando uma distribuição equilibrada das consultas. Validações Avançadas: Integrei validações em JavaScript para evitar marcações com datas ou horários retroativos, garantindo a integridade do sistema de agendamento.
 
-**### Formulário de Marcação de Exames:**
+### Formulário de Marcação de Exames:
 
 Além do formulário de consultas, desenvolvi um segundo formulário dedicado à marcação de exames. As funcionalidades incluem:
 
