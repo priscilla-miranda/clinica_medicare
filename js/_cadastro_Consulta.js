@@ -12,6 +12,9 @@ var phone = document.getElementById("phone");
 // Botão enviar - Cadastro
 $('#btnCadastro').click(function(){
     
+    if (!validaData()) {
+        return; 
+    }
     var horarioSelecionado = hora.value; 
     var horariosAgendadosMedico = horariosAgendados[medico.value] || {};
     if (horariosAgendadosMedico[data.value] && horariosAgendadosMedico[data.value].includes(horarioSelecionado)) {

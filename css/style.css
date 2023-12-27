@@ -468,11 +468,27 @@
   -----------------------------------------*/
 
   #about {
-    background: url('../images/about-bg.jpg') no-repeat top center;
+    background: url('../images/about-bg.jpg') no-repeat top right;
     background-size: cover;
+    height: 100%;
     padding-top: 150px;
     padding-bottom: 150px;
+}
+
+@media (max-width: 767px) {
+  #about {
+      background: none; /* Remove a imagem de fundo em telas menores */
   }
+}
+
+
+.profile {
+margin-top: 20px; /* Adicione margem ao bloco de perfil para espaçamento em telas menores */
+
+}
+
+
+
 
   .profile img,
   .profile figcaption {
@@ -489,6 +505,13 @@
   .profile figcaption h3 {
     margin-top: 0;
   }
+
+  @media (max-width: 767px) {
+    .profile {
+        display: block; /* Altera para layout de bloco para lidar com telas menores */
+        text-align: center; /* Centraliza o texto */
+    }
+}
 
   #about h6 {
     color: #858585;
@@ -561,6 +584,28 @@
     transform: translateY(0px);
     top: -22em;
   }
+
+  /* Estilos padrão para telas maiores */
+
+  .team-thumb {
+      margin-bottom: 30px; /* Adiciona algum espaçamento inferior para melhorar a estética */
+  }
+
+  /* Estilos padrão para telas maiores */
+#about,
+#team {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+/* Consulta de mídia para telas menores (por exemplo, telas menores ou iguais a 767px) */
+@media (max-width: 767px) {
+    #about,
+    #team {
+        padding-top: 50px; /* Ajuste conforme necessário para um padding mais curto */
+        padding-bottom: 50px; /* Ajuste conforme necessário para um padding mais curto */
+    }
+}
 
 
 

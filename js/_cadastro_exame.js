@@ -11,6 +11,9 @@ var phone = document.getElementById("phone");
 
 // Botão enviar - Cadastro
 $('#btnCadastro').click(function(){
+    if (!validaData()) {
+        return; 
+    }
 
     var horarioSelecionado = hora.value;
 
@@ -29,7 +32,7 @@ $('#btnCadastro').click(function(){
     horariosAgendados[tipoExame.value][data.value].push(horarioSelecionado);
 
    
-    if (nome.value === "" || tipoExame.value === "" || medico.value === "" || 
+   if (nome.value === "" || tipoExame.value === "" || medico.value === "" || 
     data.value === "" || hora.value === "" || phone.value === "") {
     alert("Por favor, preencha todos os campos do formulário.");
     return; // Bloqueia o cadastro se algum campo estiver vazio
